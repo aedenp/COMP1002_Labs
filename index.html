@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week 3 - HTML Forms Example</title>
+    <style>
+        input {
+            display: block;
+        }
+
+        input[type="submit"] {
+            margin-top: 1rem;
+        }
+
+        label {
+            display: block;
+            margin: 1rem 0;
+        }
+
+        /* Added styles for radio buttons and checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        input[type="radio"]+label,
+        input[type="checkbox"]+label {
+            display: inline-block;
+            margin: 0.2rem 1rem 0.2rem 0.2rem;
+        }
+
+        /* Style for date input fallback */
+        .date-input-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Registration Form</h1>
+
+    <!-- Fix 1: Added valid action URL -->
+    <form method="post" action="https://httpbin.org/post">
+        <fieldset>
+            <!-- groups like info/parts of the form -->
+            <legend>User Information</legend>
+            <!-- explains the info that is contained in the fieldset -->
+
+            <p>* is required information</p>
+            <!-- Text to explain that * means it is a required field to be filled out-->
+
+            <!-- The following is the section for basic information required on the form; Full name, last name, and email account-->
+            <label for="full_name">* Full Name:</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+
+            <label for="last_name">* Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+
+            <label for="email">* Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <!-- This section contains both the code for the password/retyped password sections as well as the date selection birthday menu-->
+            <label for="password">* Password:</label>
+            <input type="password" id="password" name="password" placeholder="Choose your password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                title="Password must contain at least 8 characters including one uppercase letter, one lowercase letter, one number and one special character (@$!%*?&)"
+                required>
+
+            <label for="password_confirm">* Confirm Password:</label>
+            <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your password"
+                required>
+
+            <!-- Fix 2: Enhanced date input with fallback instructions -->
+            <div class="date-input-group">
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" id="date_of_birth" name="date_of_birth">
+                <small>If your browser doesn't support date picker, please use format: YYYY-MM-DD (e.g., 1990-01-15)</small>
+            </div>
+
+            <!-- This section contains the code that I used to make the buttons to select gender -->
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="non-binary" name="gender" value="non-binary">
+                <label for="non-binary">Non-binary</label>
+            </fieldset>
+
+            <!-- Preferences checkboxes -->
+            <fieldset>
+                <legend>Preferences:</legend>
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">Accept Terms and Conditions</label><br>
+
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Receive Newsletter</label>
+            </fieldset>
+
+            <!-- This section contains the dropdown menu for country selection-->
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="MX">Mexico</option>
+                <option value="OTR">Other</option>
+            </select>
+
+            <!-- The final section of code contains both my basic text box "leave a comment" as well as my submit button code-->
+            <label for="user-comment">Leave a Comment:</label>
+            <textarea id="user-comment" name="comment" rows="5" cols="40" placeholder="Share your thoughts..."
+                maxlength="500"></textarea>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
