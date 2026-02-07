@@ -1,48 +1,115 @@
-*, *::before, *::after {
+/* style.css - Clean & Modern Form */
+* {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
+
 body {
-font-family: "Spectral SC", serif;
-    
+    font-family: "Spectral SC", serif;
+    background: #f5f7fa;
+    color: #000;
+    line-height: 1.5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-nav {
-    display: inline-block; /* allows padding/margin to be applied */
-  padding: 0.8rem 1.2rem;
-  color: #fff;
-  border: 2px solid #000000;
-  background-color: rgb(255, 85, 0);
-  border-radius: 8px;
-  transition: background-color 0.5s, color 0.5s; /* smooth hover transitions */
-
-  position:relative;
-	left:600px;
-    bottom:-250px;
-	width:200px;
-	height:200px;
+/* Header */
+h1 {
+    text-align: center;
+    color: #000000;
+    margin: 2rem 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #450;
 }
 
+/* Form container */
+form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px black;
+}
+
+/* Fieldset styling */
 fieldset {
-
-    border: 0px solid #4CAF50;
-
-    padding: 10px;
-
-    margin: 20px;
-
- span {
-  color: red; /* Colors every character inside a <span> within a <p> */
+    border: 2px solid #450;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 0 20px 0;
 }
-;
 
+legend {
+    font-weight: 600;
+    color: #000000;
+    padding: 0 10px;
+    background: #fff;
+}
+
+/* Labels and text */
+label {
+    display: block;
+    margin: 15px 0 5px 0;
+    font-weight: 500;
+
+}
+
+span {
+    color: #e74c3c;
 }
 
 p {
-
-    font-size: 10px;
-
-    color: red;
-
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
+
+
+ /* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #450;
+    border-radius: 6px;
+    font-family: "Spectral SC", serif;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #450;
+}
+
+/* Radio and checkbox labels */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin: 5px 20px 5px 5px;
+    
+}
+
+/* Submit button */
+input[type="submit"] {
+    background: #450;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Spectral SC", serif;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background: #ff7700;
+}
+
