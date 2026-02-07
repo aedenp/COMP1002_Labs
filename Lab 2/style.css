@@ -1,115 +1,116 @@
-/* style.css - Clean & Modern Form */
+/* This  line makes padding and borders count inside the element's width */
 * {
     box-sizing: border-box;
 }
 
+/* Setting up our page's base look and feel */
 body {
     font-family: "Spectral SC", serif;
     background: #f5f7fa;
     color: #000;
-    line-height: 1.5;
+    line-height: 1.5; /* Gives text room to breathe vertically */
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Won't get crazy wide on big screens */
+    margin: 0 auto; /* Centers everything nicely */
 }
 
-/* Header */
+/* The main heading */
 h1 {
     text-align: center;
-    color: #000000;
     margin: 2rem 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #450;
+    border-bottom: 2px solid #450; /* Adds a nice underline effect */
 }
 
-/* Form container */
+/* The form itself */
 form {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px; /* Softens those sharp corners */
     padding: 30px;
-    box-shadow: 0 5px 15px black;
+    box-shadow: 0 5px 15px black; /* Makes it more three dimensional */
 }
 
-/* Fieldset styling */
+/* Groups of related fields in their own little boxes */
 fieldset {
     border: 2px solid #450;
     border-radius: 8px;
-    padding: 20px;
-    margin: 0 0 20px 0;
+    padding: 20px; /* Gives content some breathing room */
+    margin: 0 0 20px 0; /* Space between different sections */
 }
 
+/* The little titles for each fieldset box */
 legend {
     font-weight: 600;
-    color: #000000;
     padding: 0 10px;
-    background: #fff;
+    background: #fff; /* Makes it look like it's cutting through the border */
 }
 
-/* Labels and text */
+/* Labels for our form fields */
 label {
-    display: block;
-    margin: 15px 0 5px 0;
+    display: block; /* Stacks them nicely above inputs */
+    margin: 15px 0 5px 0; /* Consistent spacing between items */
     font-weight: 500;
-
 }
 
+/* The little asterisks that show required fields */
 span {
-    color: #e74c3c;
+    color: #ff1900; /* making asterisks stand out to ensure it is filled out on form*/
 }
 
+/* That note about required fields at the top */
 p {
-    color: #e74c3c;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    color: #ff1900;
+    font-size: 0.9rem; /* smaller then other text to reduce eye strain */
+    margin-bottom: 20px; /* Pushes down to what comes next */
 }
 
-
- /* Form inputs */
+/* All our text inputs, selects, and textareas get the same look */
+/* Writing them together saved typing and keeps stuff looking the same */
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
 select,
 textarea {
-    width: 100%;
-    padding: 12px;
+    width: 100%; /* Stretches to fill available space */
+    padding: 12px; /* Makes typing comfortable */
     border: 2px solid #450;
     border-radius: 6px;
-    font-family: "Spectral SC", serif;
+    font-family: inherit; /* Uses the same font as everything else */
     font-size: 1rem;
     margin-bottom: 5px;
 }
 
+/* When someone clicks into a field this shows they're active */
 input:focus,
 select:focus,
 textarea:focus {
-    outline: none;
-    border-color: #450;
+    outline: none; /* We'll handle the focus look ourselves */
+    border-color: rgb(255, 102, 0); /* Changes border color to show it's active */
 }
 
-/* Radio and checkbox labels */
+/* Radio buttons and checkboxes sit next to their labels instead of over them */
 input[type="radio"] + label,
 input[type="checkbox"] + label {
-    display: inline-block;
-    margin: 5px 20px 5px 5px;
-    
+    display: inline-block; /* Lets them sit side-by-side */
+    margin: 5px 20px 5px 5px; /* Keeps options grouped together */
 }
 
-/* Submit button */
+/* The Submit button - our main action */
 input[type="submit"] {
     background: #450;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 30px; /* Enlarged to click easily */
     border: none;
     border-radius: 6px;
-    font-family: "Spectral SC", serif;
+    font-family: inherit; /* to match the rest of the page */
     font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
+    cursor: pointer; /* Shows it's clickable with cursor */
+    margin-top: 20px; /* Space above it so it doesn't feel crowded */
+    width: 100%; /* Full-width looks good on phones */
 }
 
+/* When someone hovers over the button, gives them visual feedback */
 input[type="submit"]:hover {
-    background: #ff7700;
+    background: #ff7700; /* Changes color to show hover effect */
 }
-
