@@ -20,3 +20,21 @@ button {
     background-color: #222;
     color: white;
 }
+
+/* Optional: Smooth transitions for theme switching */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Style the welcome message */
+#welcomeMessage {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Optional: Style the theme button differently in dark mode */
+.dark-mode button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+}
