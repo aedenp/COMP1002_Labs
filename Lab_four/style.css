@@ -1,1 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
 
+section {
+    margin-bottom: 30px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Dark mode class */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
